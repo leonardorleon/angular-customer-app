@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { CustomersComponent } from './customers.component';
 import { CustomersListComponent } from './customers-list/customers-list.component';
 import { FilterTextBoxComponent } from './customers-list/filter-textbox.component';
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { FilterTextBoxComponent } from './customers-list/filter-textbox.componen
     FilterTextBoxComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: [ CustomersComponent ]
 })
