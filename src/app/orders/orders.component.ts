@@ -3,7 +3,6 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { DataService } from '../core/data.service';
 import { ICustomer, IOrder, IOrderItem } from '../shared/interfaces';
-import { subscribeOn } from 'rxjs/operators';
 
 @Component({
   selector: 'app-orders',
