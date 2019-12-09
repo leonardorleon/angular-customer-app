@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CustomersModule } from './customers/customers.module';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     CustomersModule,
+    CoreModule,
     SharedModule
   ],
   providers: [],
