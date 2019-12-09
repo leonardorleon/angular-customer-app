@@ -9,12 +9,15 @@ import { DataService } from '../core/data.service';
 })
 export class CustomersComponent implements OnInit {
   title: string;
-  people: ICustomer[];
+  people: any[];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.title = 'Customers';
+    this.dataService.getCustomers()
+      .subscribe((customers: ICustomer[]) => this.people = customers);
+    
     // this.people = [
     //   { id: 1, name: 'john Doe', city: 'Phoenix', orderTotal: 9.99, customerSince: new Date(2014, 7, 10) },
     //   { id: 2, name: 'Jane Doe', city: 'Chandler', orderTotal: 19.99, customerSince: new Date(2017, 2, 22) },
